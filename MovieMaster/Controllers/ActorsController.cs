@@ -15,7 +15,7 @@ namespace MovieMaster.Controllers
         public async Task<IActionResult> Index()
         {
             var actors = await _context.Actors.ToListAsync();
-            return View();
+            return View(actors);
         }
     }
 }
