@@ -1,4 +1,4 @@
-﻿namespace MovieMaster.Data
+﻿namespace MovieMaster.Data.Enums
 {
     public enum MovieCategory
     {
@@ -7,6 +7,7 @@
         Drama,
         Horror,
         Documentary,
-        Romance
+        Romance,
+        Animated
     }
 }

@@ -1,4 +1,4 @@
-﻿using MovieMaster.Data;
+﻿using MovieMaster.Data.Enums;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MovieMaster.Models
@@ -10,10 +10,7 @@ namespace MovieMaster.Models
         public string Description { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
-        public string TheaterName { get; set; }
-        public string MovieActor { get; set; }
         public MovieCategory MovieCategory { get; set; }
-        public string MovieProducer { get; set; }
         //Relationships
         public ICollection<Actor_Movie> Actors_Movies { get; set; }
         [ForeignKey("TheaterId")]
@@ -22,5 +19,7 @@ namespace MovieMaster.Models
         [ForeignKey("ProducerId")]
         public int ProducerId { get; set; }
         public Producer Producer { get; set; }
+        public double Price { get; set; }
+        public string ImageURL { get; set; }
     }
 }
