@@ -14,8 +14,8 @@ namespace MovieMaster.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var movies = await _context.Movies.ToListAsync();
-            return View();
+            var movies = await _context.Movies.Include(t => t.Theater).OrderBy(m => m.Title).ToListAsync();
+            return View(movies);
         }
     }
 }
