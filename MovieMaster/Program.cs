@@ -1,11 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using MovieMaster.Data;
+using MovieMaster.Data.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddScoped<IActorsService, ActorsService>();
 builder.Services.AddDbContext<DataContext>(options => options.UseSqlite(builder.Configuration.GetConnectionString("MovieMasterDB")));
+
 
 var app = builder.Build();
 DataContextInitializer.Seed(app);

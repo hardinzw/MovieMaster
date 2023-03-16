@@ -10,6 +10,7 @@
   "profiles": {
     "MovieMaster": {
       "commandName": "Project",
+      "launchUrl": "Movies",
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "applicationUrl": "https://localhost:7112;http://localhost:5013",
